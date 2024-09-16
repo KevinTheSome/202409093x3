@@ -1,0 +1,240 @@
+body{
+    background-color: gray;
+    padding: 20px;
+}
+
+
+.visited{
+    color:red;
+    text-decoration: none;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+    transition-delay: 1s;
+}
+
+a:active {
+    color: red;
+    text-decoration: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: auto;
+}
+.holder{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+    width: 100%;
+    height: 100%;
+}
+
+.holderspecial{
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    border: black 1px solid;
+    width: 100%;
+    height: 100%;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(38, 38, 138);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .imgContainer:hover .overlay {
+    width: 100%;
+  }
+
+
+
+
+.spin{
+    animation-name: spin;
+    animation-duration: 2s;
+}
+
+.spin2{
+    animation-name: spin2;
+    animation-duration: 2s;
+}
+.confettiHolder{
+    display: flex;
+}
+
+.confetti1 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FF69B4; /* Pink */
+    animation: confetti 4.5s infinite 0.1s;
+}
+
+.confetti2 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #00ff51; /* Pink */
+    animation: confetti 5s infinite 0.6s;
+}
+
+.confetti3 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #1500ff; /* Pink */
+    animation: confetti 4.5s infinite 0.2s;
+}
+
+.confetti4 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #b3ee00; /* Pink */
+    animation: confetti 5s infinite 0.9s;
+}
+
+.confetti5 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0202; /* Pink */
+    animation: confetti 4.5s infinite 0.1s;
+}
+
+.confetti6 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #69d7ff; /* Pink */
+    animation: confetti 5s infinite 0.3s;
+}
+
+.confetti7 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FF69B4; /* Pink */
+    animation: confetti 4.5s infinite 1s;
+}
+
+.confetti8 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #551937; /* Pink */
+    animation: confetti 5s infinite 1.2s;
+}
+
+.confetti9 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #297d4a; /* Pink */
+    animation: confetti 5s infinite 1.2s;
+}
+
+.confetti10 {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #a37a8f; /* Pink */
+    animation: confetti 4.8s infinite 1.3s;
+}
+
+.ball{
+    animation-name: ball;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 12%, rgba(255,255,255,1) 100%);
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+@keyframes confetti {
+  0% {
+    opacity: 0;
+    transform: translateY(-31vh);
+  }
+  1%{
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(relative));
+  }
+}
+
+@keyframes ball {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+        transform: scale(0.8);
+      }
+
+      50% {
+        transform: scale(0.7);
+      }
+
+      75% {
+        transform: scale(0.8);
+      }
+    100% {
+      transform: scale(1);
+    }
+  }
